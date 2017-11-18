@@ -1,0 +1,8 @@
+{% for post in posts %}
+{{ post }} <br>
+{% endfor %}
+<form method="post">
+	{% csrf_token %}
+	<input type="text" name='title'/>
+	<input type="submit"/>
+</form>

@@ -1,0 +1,48 @@
+<form method="post">
+	{% csrf_token %}
+	Name
+	<input type="text" name="name"/><br>
+	Brand name
+	<input type="text" name="brand_name"/><br>
+	Address
+	<input type="text" name="address"/><br>
+	Created Date
+	<input type="text" name="created_date"/><br>
+	Last Update Date
+	<input type="text" name="last_update_date"/><br>
+	Details
+	<input type="text" name="details"/><br>
+	Starting:-
+	Date
+	<input type="number" name="starting_date" min = "1" max = "31"/>
+	Month
+	<input type="text" name="starting_month"/>
+	Year
+	<input type="number" name="starting_year"/><br>
+
+	Ending:- 
+	Date
+	<input type="number" name="ending_date" min = "1" max = "31"/>
+	Month
+	<input type="text" name="ending_month"/>
+	Year
+	<input type="number" name="ending_year"/><br>
+
+	Img_url
+	<input type="text" name="img_url"/><br>
+	Keyword
+	<input type="text" name="keywords"/><br>
+	Shoping_mall
+	<input type="text" name="shoping_mall"/><br>
+	Category
+	<input type="text" name="category"/><br>
+	Sub Category
+	<input type="text" name="sub_category"/><br>
+
+
+	<input type="submit" name="submit"/>
+</form>
+
+{% for offer in offers %}
+{{ offer.ending.date}}
+{% endfor %}
